@@ -1,0 +1,37 @@
+{
+  "name": "c3",
+  "version": "1.0.0",
+  "description": "Crypto Currency Council",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo mocah",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3aces-soft-engg/C3_.git"
+  },
+  "keywords": [
+    "crypto-currency-council"
+  ],
+  "author": "Gaurav Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3aces-soft-engg/C3_/issues"
+  },
+  "homepage": "https://github.com/3aces-soft-engg/C3_#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-qunit": "^2.0.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-http-server": "^2.0.0",
+    "grunt-notify": "^0.4.5"
+  }
+}
