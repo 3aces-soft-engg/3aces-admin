@@ -3,6 +3,19 @@
 module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        browserSync: {
+            bsFiles: {
+                src: [
+                    'assets/html/*.html',
+                    'assets/css/*.css',
+                    'assets/js/*.js',
+                ],
+            },
+            options: {
+                watchTask: true,
+                server: './assets'
+            }
+        },
         compass: {
             dist: {
                 options: {
@@ -75,8 +88,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-qunit');
+    grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-notify');
-
     
-    grunt.registerTask('default', ['concat', 'qunit', 'uglify', 'jshint', 'compass', 'watch']);
+    grunt.registerTask('default', ['browserSync', 'concat', 'qunit', 'uglify', 'jshint', 'compass', 'watch']);
 };
