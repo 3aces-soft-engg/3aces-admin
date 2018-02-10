@@ -26,12 +26,15 @@ module.exports = function (grunt) {
                 ],
                 tasks: ['compass']
             },
-            js: {
+            scripts: {
                 files: [
                     'assets/js/*.js',
                     'Gruntfile.js'
                 ],
-                tasks: ['jshint']
+                tasks: ['jshint', 'concat', 'uglify'],
+                options: {
+                    interrupt: true
+                }
             }
         },
         qunit: {
@@ -64,9 +67,7 @@ module.exports = function (grunt) {
             },
             task: ['watch']
         },
-        browserSync: {
-            
-        }
+        
     });
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-compass');
