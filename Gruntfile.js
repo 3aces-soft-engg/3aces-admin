@@ -71,7 +71,7 @@ module.exports = function (grunt) {
         },
         uglify: {
             options: {
-                banner: '/* <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+                // banner: '/* <%= grunt.template.today("dd-mm-yyyy") %> */\n'
             },
             dist: {
                 files: {
@@ -91,5 +91,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-notify');
     
-    grunt.registerTask('default', ['browserSync', 'concat', 'qunit', 'uglify', 'jshint', 'compass', 'watch']);
+    grunt.registerTask('default', ['browserSync', 'concat', 'qunit', 'uglify', 'compass', 'watch']);
 };
